@@ -1,0 +1,163 @@
+/* navbar*/
+
+.navbar {
+
+    color: white;
+    font-size: x-large;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    height: 80px;
+    transition: background-color  0.3s ease, color  0.3s ease; /* transition fluide pour le fond */
+  }
+  
+  
+    .navbar.scrolled {
+       /* background-color: #9C5928;*/
+        background-color: rgba(0, 0, 0, 0.5);;
+        
+        box-shadow: -1px 2px 2px #343434a6;
+    }
+  
+    .navbar_mobile {
+      display: none;
+    }
+    .navbar_desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    
+      font-size: x-large;
+      height: 80px;
+     
+  }
+  .onglets {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .onglets a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .onglets a:hover {
+   font-weight: 700;
+   color: white;
+  }
+
+  .onglets a:active{
+     color: white;
+     font-weight: 700;
+  }
+  .dropdown {
+    height: 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+  .dropdown-content {
+    background-color: rgba(0, 0, 0, 0.549);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+  }
+
+  #flag {
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+/*menu burger*/
+
+.burgerMenu {
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: #141817e6;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 8%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: white;
+  display: block;
+  font-family: "Inter", sans-serif;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  font-size: 46px;
+  top: 0px;
+  right: 35px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 767px){
+
+  .navbar_desktop {
+    display: none;
+  }
+  .navbar_mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: xx-large;
+}
+
+
+.burgerMenu {
+  font-size: 44px;
+  float: right;
+  margin-top: 10px;
+  display: block;
+  margin-left: 100px;
+  
+}
+.burgerMenu.open {
+  transform: rotate(90deg);
+}
+
+#logo_mobile {
+  font-size: 1em;
+}
+}
